@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Geometry Calculator 📐</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <!-- Header -->
+        <header class="app-header">
+            <span class="badge">Geometry-Calculator</span>
+            <h1>📐 2D GEOMETRY CALCULATOR</h1>
+            <p>Hitung luas & keliling bangun datar secara instan!</p>
+        </header>
+
+        <!-- Tab Pemilih Bangun Datar -->
+        <div class="shape-tabs">
+            <button class="tab-btn active" data-shape="square">🟩 Persegi</button>
+            <button class="tab-btn" data-shape="triangle">🔺 Segitiga</button>
+            <button class="tab-btn" data-shape="circle">🟡 Lingkaran</button>
+            <button class="tab-btn" data-shape="parallelogram">🔷 J. Genjang</button>
+        </div>
+
+        <!-- Dynamic Form -->
+        <form id="geometry-form" class="calculator-form">
+            
+            <!-- Dynamic Inputs Container -->
+            <div id="dynamic-inputs" class="inputs-container">
+                <!-- Diisi otomatis oleh JavaScript sesuai bentuk terpilih -->
+            </div>
+
+            <button type="submit" class="btn-calculate">🚀 HITUNG SEKARANG</button>
+        </form>
+
+        <!-- Result Box -->
+        <div class="result-card hidden" id="result-card">
+            <h2 id="result-title">Hasil Perhitungan</h2>
+
+            <div class="stats-grid">
+                <div class="stat-box area-box">
+                    <span class="stat-label">Luas (L)</span>
+                    <strong class="stat-value" id="area-val">0</strong>
+                    <small class="formula-text" id="area-formula">Formula: -</small>
+                </div>
+                <div class="stat-box perimeter-box">
+                    <span class="stat-label">Keliling (K)</span>
+                    <strong class="stat-value" id="perimeter-val">0</strong>
+                    <small class="formula-text" id="perimeter-formula">Formula: -</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
